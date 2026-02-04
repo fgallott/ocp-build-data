@@ -31,8 +31,8 @@ delivery:
 dependents:
 - ose-gcp-filestore-csi-driver-operator
 enabled_repos:
-- rhel-9-minimal-baseos-rpms
-- rhel-9-minimal-appstream-rpms
+- rhel-9-baseos-rpms
+- rhel-9-appstream-rpms
 for_payload: false
 from:
   builder:
