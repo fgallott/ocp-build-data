@@ -60,5 +60,5 @@ jobs:
 
         if: steps.changed-files.outputs.config_any_changed == 'true'
         run: |
-          uv run --project ./art-tools validate-ocp-build-data --exclude-vpn \
+          uv run --project ./art-tools validate-ocp-build-data \
           --images-dir images ${{ steps.changed-files.outputs.config_all_changed_files }}
