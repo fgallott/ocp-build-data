@@ -21,6 +21,7 @@ releases:
               live_id: 451
             - kind: fbc
           env: stage
+          url: https://gitlab.cee.redhat.com/hybrid-platforms/art/ocp-shipment-data/-/merge_requests/362
         release_date: 2026-May-25
         upgrades: 4.21.0,4.22.0-ec.0,4.22.0-ec.1
       rhcos:
