@@ -7,8 +7,8 @@ releases:
         reference_releases!: {} # x86_64: 4.22.0-0.nightly-2026-02-03-002928
       group:
         advisories:
-          rpm: -1
-          rhcos: -1
+          rpm: 158985
+          rhcos: 158986
           microshift: 158176
         release_jira: ART-14438
         shipment:
