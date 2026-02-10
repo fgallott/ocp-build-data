@@ -15,6 +15,10 @@ content:
         enabled: true
         ci_build_root:
           member: ci-openshift-build-root-latest.rhel9
+    modifications:
+    - action: replace
+      match: "ENV GO111MODULE=off"
+      replacement: "ENV GO111MODULE=auto"
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: ose-ptp-operator-container
@@ -41,8 +45,3 @@ update-csv:
   manifests-dir: manifests/
   registry: image-registry.openshift-image-registry.svc:5000
   valid-subscription-label: '["OpenShift Kubernetes Engine", "OpenShift Container Platform", "OpenShift Platform Plus"]'
-konflux:
-  # New issue, need to investigate
-  cachi2:
-    enabled: false
-  network_mode: open
