@@ -4,7 +4,7 @@ content:
     modifications:
     - action: replace
       match: "ARG RHEL_VERSION=''"
-      replacement: "ARG RHEL_VERSION='9.6'"
+      replacement: "ARG RHEL_VERSION='9.8'"
     # Uncomment the following sections to pin specific kernel versions
     # - action: replace
     #   match: "ARG KERNEL_VERSION=''"
@@ -27,11 +27,10 @@ delivery:
   - openshift4/driver-toolkit-rhel9
 enabled_repos:
 - rhel-9-server-ose-rpms-embargoed
-- rhel-9-minimal-baseos-rpms
-- rhel-9-minimal-appstream-rpms
-- rhel-9-rt-rpms
-- rhel-9-nfv
-- rhel-9-highavailability
+- rhel-98-baseos
+- rhel-98-appstream
+- rhel-98-nfv
+- rhel-98-highavailability
 for_payload: true
 from:
   member: openshift-enterprise-base-rhel9-minimal

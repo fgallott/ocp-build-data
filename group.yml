@@ -12,7 +12,7 @@ vars:
   IMPACT: Low
   CVES: None
   RHCOS_EL_MAJOR: 9
-  RHCOS_EL_MINOR: 6
+  RHCOS_EL_MINOR: 8
 
   # The go versions used by the various CI builder images.
   # WARNING: When updating GO_* vars, update streams.yml so that streams referencing
@@ -95,17 +95,15 @@ cachito:
 rhcos:
   payload_tags:
     - name: rhel-coreos
-      # once rhel-coreos 4.22 exists this line has to be updated to 4.22
-      rhcos_index_tag: quay.io/openshift-release-dev/ocp-v4.0-art-dev:4.21-{RHCOS_EL_MAJOR}.{RHCOS_EL_MINOR}-node-image
-      rhel_build_id_index: quay.io/openshift-release-dev/ocp-v4.0-art-dev:4.21-{RHCOS_EL_MAJOR}.{RHCOS_EL_MINOR}-node-image
-      rhel_version: 9.6
+      rhcos_index_tag: quay.io/openshift-release-dev/ocp-v4.0-art-dev:4.22-{RHCOS_EL_MAJOR}.{RHCOS_EL_MINOR}-node-image
+      rhel_build_id_index: quay.io/openshift-release-dev/ocp-v4.0-art-dev:4.22-{RHCOS_EL_MAJOR}.{RHCOS_EL_MINOR}-node-image
+      rhel_version: 9.8
       meta_type: commitmeta
       primary: true
     - name: rhel-coreos-extensions
-      # once rhel-coreos-extensions 4.22 exists this line has to be updated to 4.22
-      rhcos_index_tag: quay.io/openshift-release-dev/ocp-v4.0-art-dev:4.21-{RHCOS_EL_MAJOR}.{RHCOS_EL_MINOR}-node-image-extensions
-      rhel_build_id_index: quay.io/openshift-release-dev/ocp-v4.0-art-dev:4.21-{RHCOS_EL_MAJOR}.{RHCOS_EL_MINOR}-node-image
-      rhel_version: 9.6
+      rhcos_index_tag: quay.io/openshift-release-dev/ocp-v4.0-art-dev:4.22-{RHCOS_EL_MAJOR}.{RHCOS_EL_MINOR}-node-image-extensions
+      rhel_build_id_index: quay.io/openshift-release-dev/ocp-v4.0-art-dev:4.22-{RHCOS_EL_MAJOR}.{RHCOS_EL_MINOR}-node-image
+      rhel_version: 9.8
       meta_type: meta
     - name: rhel-coreos-10
       rhcos_index_tag: quay.io/openshift-release-dev/ocp-v4.0-art-dev:4.21-10.1-node-image
@@ -118,10 +116,9 @@ rhcos:
       rhel_version: 10.1
       meta_type: meta
   enabled_repos:
-  - rhel-9-baseos-rpms
-  - rhel-9-appstream-rpms
-  - rhel-9-fast-datapath-rpms
-  - rhel-9-server-ose-rpms
+  - rhel-98-baseos
+  - rhel-98-appstream
+  - rhel-98-fast-datapath
   require_consistency:
     driver-toolkit:
     - kernel  # since 9.3, kernel-rt is merged into the kernel package.
