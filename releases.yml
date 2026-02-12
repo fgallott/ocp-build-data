@@ -65,7 +65,12 @@ releases:
             aarch64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:816827a8884beb3be32f2d88baa2c9651ef40e56567c4f96329a4d40f1b474df
       members:
         rpms: []
-        images: []
+        images:
+          - distgit_key: ose-baremetal-installer
+            why: Pin build due to differing global network_mode config for the build that's in nightly
+            metadata:
+              is:
+                nvr: ose-baremetal-installer-container-v4.21.0-202602110450.p2.g10d6d46.assembly.stream.el9
   4.21.1:
     assembly:
       type: standard
