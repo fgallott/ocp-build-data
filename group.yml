@@ -12,7 +12,7 @@ vars:
   IMPACT: Low
   CVES: None
   RHCOS_EL_MAJOR: 9
-  RHCOS_EL_MINOR: 6
+  RHCOS_EL_MINOR: 8
 
   # The go versions used by the various CI builder images.
   # WARNING: When updating GO_* vars, update streams.yml so that streams referencing
@@ -118,10 +118,9 @@ rhcos:
       rhel_version: 10.1
       meta_type: meta
   enabled_repos:
-  - rhel-96-baseos
-  - rhel-96-appstream
-  - rhel-9-fast-datapath-rpms
-  - rhel-9-server-ose-rpms
+  - rhel-98-baseos
+  - rhel-98-appstream
+  - rhel-98-fast-datapath
   require_consistency:
     driver-toolkit:
     - kernel  # since 9.3, kernel-rt is merged into the kernel package.
