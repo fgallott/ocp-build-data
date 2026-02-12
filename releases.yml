@@ -49,7 +49,12 @@ releases:
             aarch64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e353d290aa1a3cdc876705af0e97f4ce5897fce5bdf8f9760457b073fe202b55
             s390x: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:cb208134326b32a3c1bc03dba99ec30c866c9519a7723e30c2327d99d2e86003
       members:
-        rpms: []
+        rpms:
+          - distgit_key: ignition
+            why: Pin required ignition to assembly
+            metadata:
+              is:
+                el9: ignition-2.21.0-6.el9_6
         images: []
   4.19.23:
     assembly:
