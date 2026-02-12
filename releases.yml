@@ -20,6 +20,8 @@ releases:
           url: https://gitlab.cee.redhat.com/hybrid-platforms/art/ocp-shipment-data/-/merge_requests/362
         release_date: 2026-May-25
         upgrades: 4.21.0,4.22.0-ec.0,4.22.0-ec.1
+        advisories:
+          microshift: 159142
       rhcos:
         rhel-coreos:
           images:
@@ -46,7 +48,12 @@ releases:
             s390x: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6d997d0e5957d7fa7403bf7c0019cb1d493e59659dcc085db875281978acc1c8
             ppc64le: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2ea6c5b7059f71f0df8e7c09281bf75e033436ccd40b6dd27e84c660f3449b9a
       members:
-        rpms: []
+        rpms:
+          - distgit_key: microshift
+            why: Pin microshift to assembly
+            metadata:
+              is:
+                el9: microshift-4.22.0~ec.2-202602120946.p0.gea757c8.assembly.ec.2.el9
         images:
           - distgit_key: ovn-kubernetes-microshift
             why: Query from assembly basis event failed to replicate referenced nightly content exactly. Pinning to replicate.
