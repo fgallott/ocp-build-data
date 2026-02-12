@@ -4,7 +4,7 @@ content:
     modifications:
     - action: replace
       match: "ARG RHEL_VERSION=''"
-      replacement: "ARG RHEL_VERSION='9.6'"
+      replacement: "ARG RHEL_VERSION='9.8'"
     # Uncomment the following sections to pin specific kernel versions
     # - action: replace
     #   match: "ARG KERNEL_VERSION=''"
@@ -14,7 +14,7 @@ content:
     #   replacement: "ARG RT_KERNEL_VERSION='1.2.3'"
     git:
       branch:
-        target: release-4.22
+        target: release-4.23
       url: git@github.com:openshift-priv/driver-toolkit.git
       web: https://github.com/openshift/driver-toolkit
 distgit:
@@ -32,10 +32,10 @@ enabled_repos:
 - rhel-9-baseos-rpms
 - rhel-9-appstream-rpms
 - rhel-9-rt-rpms
-- rhel-96-baseos
-- rhel-96-appstream
-- rhel-96-nfv
-- rhel-96-highavailability
+- rhel-98-baseos
+- rhel-98-appstream
+- rhel-98-nfv
+- rhel-98-highavailability
 for_payload: true
 from:
   member: openshift-enterprise-base-rhel9
