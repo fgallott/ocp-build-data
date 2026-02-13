@@ -116,6 +116,7 @@ rhcos:
       rhel_version: 10.1
       meta_type: meta
   enabled_repos:
+  - rhel-9-server-ose-rpms
   - rhel-98-baseos
   - rhel-98-appstream
   - rhel-98-fast-datapath
