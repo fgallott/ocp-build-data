@@ -27,6 +27,11 @@ delivery:
   - openshift4/driver-toolkit-rhel9
 enabled_repos:
 - rhel-9-server-ose-rpms-embargoed
+- rhel-9-baseos-rpms
+- rhel-9-appstream-rpms
+- rhel-9-nfv
+- rhel-9-highavailability
+- rhel-9-rt-rpms
 - rhel-98-baseos
 - rhel-98-appstream
 - rhel-98-nfv
