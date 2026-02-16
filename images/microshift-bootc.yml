@@ -33,6 +33,7 @@ enabled_repos:
 - rhel-9-fast-datapath-rpms
 - rhel-9-server-microshift-rpms
 name: openshift/microshift-bootc-rhel9
+canonical_builders_from_upstream: false
 owners:
 - microshift-devel@redhat.com
 konflux:
