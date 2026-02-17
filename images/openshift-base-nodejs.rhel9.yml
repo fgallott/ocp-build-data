@@ -6,6 +6,7 @@ content:
         target: nodejs-libs
       url: git@github.com:openshift-priv/ocp-build-data.git
       web: https://github.com/openshift-eng/ocp-build-data
+      url_pull: git@github.com:openshift/ocp-build-data.git
     ci_alignment:
       streams_prs:
         enabled: false
