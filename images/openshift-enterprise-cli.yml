@@ -19,6 +19,8 @@ delivery:
   repo_name: ose-cli
   delivery_repo_names:
   - openshift4/ose-cli-rhel9
+enabled_repos:
+- rhel-9-minimal-baseos-rpms
 for_payload: true
 from:
   builder:
