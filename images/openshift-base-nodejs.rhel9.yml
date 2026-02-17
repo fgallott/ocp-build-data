@@ -3,10 +3,9 @@ content:
   source:
     git:
       branch:
-        target: nodejs-libs
+        target: openshift-base-nodejs-rhel9
       url: git@github.com:openshift-priv/ocp-build-data.git
       web: https://github.com/openshift-eng/ocp-build-data
-      url_pull: git@github.com:openshift/ocp-build-data.git
     ci_alignment:
       streams_prs:
         enabled: false
