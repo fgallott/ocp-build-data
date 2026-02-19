@@ -67,11 +67,11 @@ releases:
       members:
         rpms: []
         images:
-        - distgit_key: driver-toolkit
-          metadata:
-            is:
-              nvr: driver-toolkit-container-v4.21.0-202602180819.p2.g5c53d75.assembly.stream.el9
-          why: Pin build from nightly extra good
+          - distgit_key: driver-toolkit
+            metadata:
+              is:
+                nvr: driver-toolkit-container-v4.21.0-202602180819.p2.g5c53d75.assembly.stream.el9
+            why: Pin build from nightly extra good
   4.21.2:
     assembly:
       type: standard
