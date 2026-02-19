@@ -44,7 +44,12 @@ releases:
             ppc64le: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9684ff9bb44586efe2a5f02d2965d1a1fce2772272a1810e75fa74965d959cde
       members:
         rpms: []
-        images: []
+        images:
+          - distgit_key: baremetal-installer
+            metadata:
+              is:
+                nvr: ose-baremetal-installer-container-v4.14.0-202602181802.p2.g8b8a02b.assembly.stream.el8
+            why: Pin build from nightly extra good
   4.14.61:
     assembly:
       type: standard
