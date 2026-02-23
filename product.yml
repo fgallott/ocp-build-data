@@ -28,6 +28,8 @@ bug_mapping:
       issue_component: Networking / openshift-sdn
     aws-kms-encryption-provider-container:
       issue_component: HyperShift
+    aws-node-termination-handler-container:
+      issue_component: HyperShift
     azure-kms-encryption-provider-container:
       issue_component: HyperShift
     bare-metal-event-relay-operator-bundle-container:
