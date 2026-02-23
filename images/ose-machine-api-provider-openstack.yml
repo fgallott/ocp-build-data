@@ -31,5 +31,3 @@ owners:
 - osasinfra-dev@redhat.com
 konflux:
   tagging_mode: enabled
-  cachi2:
-    enabled: false # https://issues.redhat.com/browse/ART-13260
