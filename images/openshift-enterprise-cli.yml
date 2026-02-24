@@ -10,6 +10,10 @@ content:
       streams_prs:
         ci_build_root:
           member: ci-openshift-build-root-latest.rhel9
+    modifications:
+    - action: replace
+      match: "RUN dnf install -y subscription-manager && dnf clean all && rm -rf /var/cache/dnf/*"
+      replacement: ""
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: openshift-enterprise-cli-container
