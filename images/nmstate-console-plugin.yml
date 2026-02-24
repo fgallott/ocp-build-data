@@ -47,6 +47,8 @@ owners:
 - phoracek@redhat.com
 - fge@redhat.com
 konflux:
+  vm_override:
+    aarch64: linux-d160-c4xlarge/arm64
   cachito:
     mode: emulation
   network_mode: open # Bunch of yarn dependencies, Jira: ART-14311
