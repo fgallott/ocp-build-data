@@ -21,8 +21,6 @@ from:
 name: openshift/ovirt-csi-driver-rhel8
 owners:
 - rgolan@redhat.com
-konflux:
-  network_mode: open
 delivery:
   delivery_repo_names:
   - openshift4/ovirt-csi-driver-rhel8
