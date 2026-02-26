@@ -10,7 +10,7 @@ releases:
         advisories:
           rpm: 159605
           rhcos: 159606
-        release_jira: ART-0
+        release_jira: ART-14631
         shipment:
           advisories:
             - kind: image
