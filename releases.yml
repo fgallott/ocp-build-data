@@ -11,8 +11,8 @@ releases:
           ppc64le: 4.17.0-0.nightly-ppc64le-2026-02-26-001611
       group:
         advisories:
-          rpm: -1
-          rhcos: -1
+          rpm: 159607
+          rhcos: 159608
         release_jira: ART-0
         shipment:
           advisories:
