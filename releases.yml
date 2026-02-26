@@ -51,7 +51,12 @@ releases:
             ppc64le: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a0b2e23799ff36b6d7437a99f2fc5bef1f122d47bbae8af23680e52e375a0070
       members:
         rpms: []
-        images: []
+        images:
+          - distgit_key: ose-ibm-vpc-block-csi-driver
+            why: Set network mode to open
+            metadata:
+              konflux:
+                network_mode: open
       permits:
         - code: CONFLICTING_INHERITED_DEPENDENCY
           component: cluster-node-tuning-operator
