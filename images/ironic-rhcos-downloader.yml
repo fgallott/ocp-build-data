@@ -23,8 +23,6 @@ from:
 name: openshift/ose-ironic-machine-os-downloader-rhel9
 owners:
 - ironic-osp-owners@redhat.com
-konflux:
-  network_mode: open
 delivery:
   delivery_repo_names:
   - openshift4/ose-ironic-machine-os-downloader-rhel9
