@@ -56,6 +56,16 @@ releases:
             metadata:
               konflux:
                 network_mode: open
+          - distgit_key: dpu-operator
+            why: Pin build to assembly
+            metadata:
+              is:
+                nvr: dpu-operator-container-v4.22.0-202602260538.p2.g1ab76b5.assembly.ec.3.el9
+          - distgit_key: openshift-kubernetes-nmstate-operator
+            why: Pin build to assembly
+            metadata:
+              is:
+                nvr: ose-kubernetes-nmstate-operator-container-v4.22.0-202602260538.p2.gd8a2b0e.assembly.ec.3.el9
       permits:
         - code: CONFLICTING_INHERITED_DEPENDENCY
           component: cluster-node-tuning-operator
