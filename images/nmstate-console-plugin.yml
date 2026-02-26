@@ -1,5 +1,3 @@
-cachito:
-  enabled: true  # Cachito does not work with go 1.22 https://issues.redhat.com/browse/STONEBLD-2206, explicitly enabling for nodejs
 content:
   source:
     dockerfile: Dockerfile.art
@@ -8,12 +6,6 @@ content:
         target: release-4.22
       url: git@github.com:openshift-priv/nmstate-console-plugin.git
       web: https://github.com/openshift/nmstate-console-plugin
-    modifications:
-    - action: replace
-      match: "COPY $REMOTE_SOURCES $REMOTE_SOURCES_DIR"
-      replacement: |-
-        COPY $REMOTE_SOURCES $REMOTE_SOURCES_DIR
-        RUN touch $REMOTE_SOURCES_DIR/cachito-gomod-with-deps/app/registry-ca.pem $REMOTE_SOURCES_DIR/cachito-gomod-with-deps/app/.npmrc
     ci_alignment:
       streams_prs:
         ci_build_root:
@@ -49,6 +41,7 @@ owners:
 konflux:
   vm_override:
     aarch64: linux-d160-c4xlarge/arm64
-  cachito:
-    mode: emulation
-  network_mode: open # https://issues.redhat.com/browse/ART-14311
+  cachi2:
+    lockfile:
+      modules:
+      - nginx:1.24
