@@ -40,7 +40,10 @@ konflux:
   - rhel-8-baseos-rpms
   - rhel-8-appstream-rpms
   - rhel-8-rt-rpms
-  network_mode: open
+  cachi2:
+    lockfile:
+      modules:
+      - perl:5.26
 delivery:
   delivery_repo_names:
   - openshift4/driver-toolkit-rhel8

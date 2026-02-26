@@ -39,10 +39,6 @@ labels:
 name: openshift/ose-ovn-kubernetes
 owners:
 - aos-networking-staff@redhat.com
-konflux:
-  cachi2:
-    enabled: false
-  network_mode: open
 delivery:
   delivery_repo_names:
   - openshift4/ose-ovn-kubernetes

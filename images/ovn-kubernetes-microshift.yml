@@ -41,8 +41,6 @@ labels:
 name: openshift/ose-ovn-kubernetes-microshift-rhel8
 owners:
 - aos-networking-staff@redhat.com
-konflux:
-  network_mode: open
 delivery:
   delivery_repo_names:
   - openshift4/ose-ovn-kubernetes-microshift-rhel8
