@@ -66,6 +66,11 @@ releases:
             metadata:
               is:
                 nvr: ose-kubernetes-nmstate-operator-container-v4.22.0-202602260538.p2.gd8a2b0e.assembly.ec.3.el9
+          - distgit_key: ose-network-tools
+            why: Pin build to assembly
+            metadata:
+              is:
+                nvr: ose-network-tools-container-v4.22.0-202602101048.p2.g3726e6c.assembly.stream.el9
       permits:
         - code: CONFLICTING_INHERITED_DEPENDENCY
           component: cluster-node-tuning-operator
