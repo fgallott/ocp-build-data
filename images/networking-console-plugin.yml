@@ -39,3 +39,8 @@ konflux:
     lockfile:
       modules:
       - nginx:1.24
+okd:
+  content:
+    source:
+      dockerfile: Dockerfile
+      modifications: []
