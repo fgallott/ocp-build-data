@@ -33,7 +33,11 @@ name: openshift/ose-pod
 owners:
 - aos-pod@redhat.com
 konflux:
-  network_mode: open
+  cachi2:
+    lockfile:
+      rpms:
+      - glibc-static
+      - libxcrypt-static
 delivery:
   delivery_repo_names:
   - openshift4/ose-pod
