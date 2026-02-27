@@ -1,5 +1,3 @@
-cachito:
-  enabled: true
 content:
   source:
     dockerfile: Dockerfile.art
@@ -8,12 +6,6 @@ content:
         target: release-{MAJOR}.{MINOR}
       url: git@github.com:openshift-priv/networking-console-plugin.git
       web: https://github.com/openshift/networking-console-plugin
-    modifications:
-    - action: replace
-      match: "COPY $REMOTE_SOURCES $REMOTE_SOURCES_DIR"
-      replacement: |-
-        COPY $REMOTE_SOURCES $REMOTE_SOURCES_DIR
-        RUN touch $REMOTE_SOURCES_DIR/cachito-gomod-with-deps/app/registry-ca.pem $REMOTE_SOURCES_DIR/cachito-gomod-with-deps/app/.npmrc
     pkg_managers:
     - npm
 distgit:
@@ -41,9 +33,10 @@ payload_name: networking-console-plugin
 konflux:
   vm_override:
     aarch64: linux-d160-c4xlarge/arm64
-  cachito:
-    mode: emulation
-  network_mode: open # Bunch of yarn dependencies, not sure how to fix
+  cachi2:
+    lockfile:
+      modules:
+      - nginx:1.26
 okd:
   content:
     source:
