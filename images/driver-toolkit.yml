@@ -21,11 +21,12 @@ content:
       url: git@github.com:openshift-priv/driver-toolkit.git
       web: https://github.com/openshift/driver-toolkit
 enabled_repos:
-- rhel-8-baseos-rpms
-# - rhel-8-rt-rpms -- for the lifetime of 8.6 EUS this will no longer be updated
-# and instead kernel-rt updates are in ART's plashet:
 - rhel-8-server-ose-rpms-embargoed
+- rhel-8-baseos-rpms
 - rhel-8-appstream-rpms
+- rhel-8-baseos-rpms
+- rhel-8-appstream-rpms
+- rhel-8-rt-rpms
 for_payload: true
 from:
   member: openshift-enterprise-base
@@ -33,13 +34,6 @@ name: openshift/driver-toolkit-rhel8
 owners:
 - edge-sro@redhat.com
 konflux:
-  enabled_repos:
-  - rhel-8-server-ose-rpms-embargoed
-  - rhel-8-baseos-rpms
-  - rhel-8-appstream-rpms
-  - rhel-8-baseos-rpms
-  - rhel-8-appstream-rpms
-  - rhel-8-rt-rpms
   cachi2:
     lockfile:
       modules:
