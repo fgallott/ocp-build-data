@@ -122,7 +122,6 @@ rhcos:
     - rhel-9-server-ose-rpms
     - rhel-98-baseos
     - rhel-98-appstream
-    - rhel-96-appstream
     - rhel-9-fast-datapath-rpms
   require_consistency:
     driver-toolkit:
