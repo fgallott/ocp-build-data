@@ -48,7 +48,3 @@ name: openshift/ose-ovn-kubernetes-rhel9
 payload_name: ovn-kubernetes
 owners:
 - aos-networking-staff@redhat.com
-konflux:
-  cachi2:
-    enabled: false
-  network_mode: open
