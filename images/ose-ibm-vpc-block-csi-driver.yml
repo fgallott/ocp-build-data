@@ -37,8 +37,3 @@ name: openshift/ose-ibm-vpc-block-csi-driver-rhel9
 payload_name: ibm-vpc-block-csi-driver
 owners:
 - aos-storage-staff@redhat.com
-konflux:
-  cachi2:
-    # Need upstream fix
-    enabled: false
-  network_mode: open
