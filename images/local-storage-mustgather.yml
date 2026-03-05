@@ -3,8 +3,6 @@ content:
     dockerfile: Dockerfile.mustgather
     git:
       branch:
-        # The target version is 4.18 on purpose. Ref: https://issues.redhat.com/browse/ART-14558
-        # Do not change branch without team approval
         target: release-4.18
       url: git@github.com:openshift-priv/local-storage-operator.git
       web: https://github.com/openshift/local-storage-operator
@@ -25,9 +23,7 @@ enabled_repos:
 - rhel-94-server-ose-rpms-embargoed
 for_payload: false
 from:
-  builder:
-  - stream: rhel-9-golang-1-22
-  member: openshift-enterprise-base-rhel94
+  member: ose-must-gather-rhel9
 name: openshift/ose-local-storage-mustgather-rhel9
 name_in_bundle: local-storage-mustgather
 owners:
