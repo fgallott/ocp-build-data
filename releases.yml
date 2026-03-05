@@ -1,4 +1,43 @@
 releases:
+  4.20.16:
+    assembly:
+      type: standard
+      basis:
+        time: "2026-03-04T23:59:04+00:00"
+        reference_releases:
+          ppc64le: 4.20.0-0.nightly-ppc64le-2026-03-05-022258
+          aarch64: 4.20.0-0.nightly-arm64-2026-03-05-022258
+          s390x: 4.20.0-0.nightly-s390x-2026-03-05-022258
+          x86_64: 4.20.0-0.nightly-2026-03-05-003951
+      group:
+        advisories:
+          rpm: -1
+          rhcos: -1
+        release_jira: ART-0
+        shipment:
+          advisories:
+            - kind: image
+            - kind: extras
+            - kind: metadata
+            - kind: fbc
+        release_date: 2026-Mar-11
+        upgrades: 4.19.15,4.19.16,4.19.17,4.19.18,4.19.19,4.19.20,4.19.21,4.19.22,4.19.23,4.19.24,4.20.0,4.20.1,4.20.2,4.20.3,4.20.4,4.20.5,4.20.6,4.20.8,4.20.9,4.20.10,4.20.11,4.20.12,4.20.13,4.20.14,4.20.15
+      rhcos:
+        rhel-coreos:
+          images:
+            x86_64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:35cee8aff82bfa8fc30ec46f61f15408ccf39d00f37ae22a7e19f77f67e5f4bc
+            s390x: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1d3b7336229e4776a203deccfe64cee176d7ff01d0dcb7b3d42b08c5c85176cc
+            ppc64le: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3b7ceed94f7f3c3ddf9e7f1567e7de1640394ae199f00dc7e5ca012fdef04583
+            aarch64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d52a4eb23374a0263f7754bd3a32d85495ea50bb896224833ed9e295acfde82c
+        rhel-coreos-extensions:
+          images:
+            x86_64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:bf18d37657cff26bb88be6fbbdaf64ae8f1f090312233b0c50a904a35729c74c
+            s390x: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:db323176f2b5947b9926d4531deddbc2246c1b6de937851c202bdf14d7a82e8b
+            ppc64le: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9fdbec6968fd99aec81a2bae3e40d04ef42ae4107b03da511ddeb4a401339175
+            aarch64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:df37d5f68cb8b9569bbfe485773054c3a74ef4af6ac9e22212cfe28ba08052f0
+      members:
+        rpms: []
+        images: []
   4.20.15:
     assembly:
       type: standard
