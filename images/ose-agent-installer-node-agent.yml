@@ -26,7 +26,10 @@ name: openshift/ose-agent-installer-node-agent-rhel8
 owners:
 - ocp-agent-team@redhat.com
 konflux:
-  network_mode: open
+  cachi2:
+    lockfile:
+      modules:
+      - container-tools
 delivery:
   delivery_repo_names:
   - openshift4/ose-agent-installer-node-agent-rhel8
