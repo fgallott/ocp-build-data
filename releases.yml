@@ -57,11 +57,11 @@ releases:
       members:
         rpms: []
         images:
-        - distgit_key: node-feature-discovery
-          why: pinned node-feature-discovery version which has konflux build
-          metadata:
-            is:
-              nvr: node-feature-discovery-container-v4.20.0-202602261925.p2.gd3d2dcc.assembly.stream.el9
+          - distgit_key: node-feature-discovery
+            why: pinned node-feature-discovery version which has konflux build
+            metadata:
+              is:
+                nvr: node-feature-discovery-container-v4.20.0-202602261925.p2.gd3d2dcc.assembly.stream.el9
   4.20.15:
     assembly:
       type: standard
