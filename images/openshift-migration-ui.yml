@@ -43,6 +43,9 @@ konflux:
         -  file
         -  file-libs
         -  ghc-srpm-macros
+        -  glibc
+        -  glibc-common
+        -  glibc-gconv-extra
         -  go-srpm-macros
         -  nodejs
         -  nodejs-devel
