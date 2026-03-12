@@ -34,8 +34,7 @@ releases:
           component: 'ose-tools'
       issues:
         include:
-          # kernel bug for coreos nvr kernel-5.14.0-427.115.1.el9_4
-          - id: OCPBUGS-77843
+          - id: OCPBUGS-77843 # kernel bug for coreos nvr kernel-5.14.0-427.115.1.el9_4
       rhcos:
         rhel-coreos:
           images:
