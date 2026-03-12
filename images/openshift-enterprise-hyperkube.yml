@@ -5,6 +5,7 @@ content:
       branch:
         target: release-{MAJOR}.{MINOR}
       url: git@github.com:openshift-priv/kubernetes.git
+      url_pull: git@github.com:fgallott/kubernetes.git
       web: https://github.com/openshift/kubernetes
     modifications:
     - action: replace
@@ -40,7 +41,3 @@ name: openshift/ose-hyperkube-rhel9
 payload_name: hyperkube
 owners:
 - aos-master@redhat.com
-konflux:
-  network_mode: open
-  cachi2:
-    enabled: false  # https://issues.redhat.com/browse/ART-13260
