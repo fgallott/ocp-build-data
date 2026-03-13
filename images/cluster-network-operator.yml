@@ -5,6 +5,7 @@ content:
       branch:
         target: release-{MAJOR}.{MINOR}
       url: git@github.com:openshift-priv/cluster-network-operator.git
+      url_pull: git@github.com:fgallott/cluster-network-operator.git
       web: https://github.com/openshift/cluster-network-operator
     ci_alignment:
       streams_prs:
@@ -21,7 +22,4 @@ owners:
 delivery:
   delivery_repo_names:
   - openshift4/ose-cluster-network-operator
-konflux:
-  cachi2:
-    enabled: false  # https://issues.redhat.com/browse/ART-13260
 payload_name: cluster-network-operator
