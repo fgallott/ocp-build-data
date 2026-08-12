@@ -6,6 +6,12 @@ content:
         target: release-{MAJOR}.{MINOR}
       url: git@github.com:openshift-priv/containernetworking-plugins.git
       web: https://github.com/openshift/containernetworking-plugins
+    modifications:
+      # dos2unix is pre-installed in the rhel-8-golang builder image.
+      # The builder stage can't reach external repos in hermetic builds.
+      - action: replace
+        match: "RUN yum install -y dos2unix"
+        replacement: "RUN echo yum install -y dos2unix"
     ci_alignment:
       streams_prs:
         # Label so that this PR automatically merges if tests pass.
